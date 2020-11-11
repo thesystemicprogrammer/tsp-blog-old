@@ -1,0 +1,33 @@
+= Sample Page
+:page-layout: default
+:page-permalink: /sample/
+:url-asciidoctor: http://asciidoctor.org
+
+This is a sample page composed in AsciiDoc.
+Jekyll converts it to HTML using {url-asciidoctor}[Asciidoctor].
+
+:sourcedir: src/main/java
+
+[source,java, linenums]
+----
+package com.swisscom.eai.processors;
+
+import lombok.extern.slf4j.Slf4j;
+import org.apache.camel.Exchange;
+import org.apache.camel.Processor;
+import org.apache.camel.component.cxf.CxfPayload;
+import org.apache.cxf.binding.soap.SoapHeader;
+
+@Slf4j
+public class RequestLogProcessor implements Processor { <1> 
+
+    @Override
+    public void process(Exchange exchange) throws Exception {
+        CxfPayload<SoapHeader> requestPayload = exchange.getIn().getBody(CxfPayload.class);
+        log.info(requestPayload.toString()); <2>
+    }
+}
+----
+
+<1> This is the normals method signature 
+<2> Here we see the difference between a normal one and this call

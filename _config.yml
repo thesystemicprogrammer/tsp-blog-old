@@ -18,19 +18,48 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: The Systgemic Programmer
-email: thomasb@thesystemicprogrammer.org
+title: The Systemic Programmer
 description: >- # this means to ignore newlines until "baseurl:"
- A simple blog about my experience as a software engineer.
+ A simple blog about my experience and my learning journey as a software engineer
+tagline: A software engineer's learning journey
+
+author: Thomas Berchtold
+email: thomasb@thesystemicprogrammer.org
+
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "https://thesystemicprogrammer.org" # the base hostname & protocol for your site, e.g. http://example.com
+
+twitter:
+  username: thesystemicprog
+  card: summary
+
+social:
+  name: Thomas Berchtold
+  links: 
+    - https://twitter.com/thesystemicprog
+    - https://www.linkedin.com/in/thomas-berchtold
+
+
+github_username:  thesystemicprogrammer
+
+asciidoctor:
+  attributes:
+   icons: font 
+   source-highlighter: pygments
+   pygments-css: class
+   pygments-stylesheet: /assets/css/asciidoc-pygments.css
+   pygments-style: monokai
+   pygments-linenums-mode: inline
+
+
+sass:
+  sass_dir: _sass
+  style: compressed
 
 # Build settings
-theme: minima
 plugins:
-  - jekyll-feed
+  - jekyll-asciidoc
+  - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -40,7 +69,8 @@ plugins:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
+exclude:
+  - README.md
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/

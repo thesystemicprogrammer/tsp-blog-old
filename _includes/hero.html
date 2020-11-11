@@ -1,0 +1,23 @@
+{% if page.hero.image %}
+    <section class="hero is-medium" style="background-image: url('/assets/images/{{ page.hero.image }}'); background-position: center center;">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 class="title has-text-white" style="font-size: 5vw;">
+                {{page.hero.title }}
+            </h1>
+            <h2 class="subtitle has-text-white" style="font-size: 3.5vw;">
+                {{ page.hero.subtitle }}
+            </h2>
+        </div>
+    </div>
+    </section>
+
+    {% if page.hero.credits.author-name %}
+        <small class="ml-1">
+            Image by
+            <a href="{{ page.hero.credits.author-link }}">{{ page.hero.credits.author-name }}</a>
+            on
+            <a href="{{ page.hero.credits.company-link }}">{{ page.hero.credits.company-name }}</a>
+        </small>
+    {% endif %}
+{% endif %}

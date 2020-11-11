@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ site.locale | slice: 0,2 | default: "en" }}">
+
+{% include head.html %}
+
+<body class="has-navbar-fixed-top has-background-white-ter">
+
+  {% include header.html %}
+  {% include hero.html %}
+
+  {{ content }}
+
+  {% include footer.html %}
+
+</body>
+
+</html>
