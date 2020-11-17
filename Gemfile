@@ -16,7 +16,9 @@ gem 'pygments.rb', '~> 1.1.2'
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem 'jekyll-asciidoc'
+  gem 'jekyll-archives'
   gem 'jekyll-seo-tag'
+  gem 'jekyll-sitemap'
 end
 
 

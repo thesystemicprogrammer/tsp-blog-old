@@ -1,0 +1,8 @@
+---
+layout: none
+---
+User-agent: *
+Disallow: /
+Disallow: /legal/
+Disallow: /404.html
+Sitemap: {{ site.url }}/sitemap.xml

@@ -1,23 +1,33 @@
 {% if page.hero.image %}
-    <section class="hero is-medium" style="background-image: url('/assets/images/{{ page.hero.image }}'); background-position: center center;">
-    <div class="hero-body">
-        <div class="container has-text-centered">
-            <h1 class="title has-text-white" style="font-size: 5vw;">
-                {{page.hero.title }}
-            </h1>
-            <h2 class="subtitle has-text-white" style="font-size: 3.5vw;">
-                {{ page.hero.subtitle }}
-            </h2>
+    {% assign hero = site.data.licensed-images[page.hero.image] %}
+    {% assign license = site.data.licenses[hero.license] %}
+
+    <div class="hero is-{{ page.hero.extension | default: "medium" }}" style="background-image: url('/assets/images/{{ hero.image }}'); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+        <div class="hero-body">
+        {% if page.hero.title %}
+            <div class="container has-text-centered">
+                <div class="has-text-{{ page.hero.color | default: 'white'}}" style="font-size: 4.5rem; font-weight: 600;">
+                    {{page.hero.title }}
+                </div>
+                {% if page.hero.title %}
+                    <div class="has-text-{{ page.hero.color | default: 'white'}}" style="font-size: 3.5rem; font-weight: 600;">
+                        {{ page.hero.subtitle }}
+                    </div> 
+                {% endif%}
+            </div>
+
+        {% endif %}
         </div>
     </div>
-    </section>
 
-    {% if page.hero.credits.author-name %}
-        <small class="ml-1">
+    {% if hero.author-name %}
+        <p class="ml-1 is-size-7">
             Image by
-            <a href="{{ page.hero.credits.author-link }}">{{ page.hero.credits.author-name }}</a>
+            <a href="{{ hero.author-link }}">{{ hero.author-name }}</a>
             on
-            <a href="{{ page.hero.credits.company-link }}">{{ page.hero.credits.company-name }}</a>
-        </small>
+            <a href="{{ hero.company-link }}">{{ hero.company-name }}</a>
+            , licensed under 
+            <a href="{{ license.link }}">{{ license.name }}</a>
+        </p>
     {% endif %}
 {% endif %}

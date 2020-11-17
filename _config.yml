@@ -54,12 +54,14 @@ asciidoctor:
 
 sass:
   sass_dir: _sass
-  style: compressed
+  # style: compressed
 
 # Build settings
 plugins:
   - jekyll-asciidoc
   - jekyll-seo-tag
+  - jekyll-archives
+  - jekyll-sitemap
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -71,6 +73,7 @@ plugins:
 #
 exclude:
   - README.md
+  - cyonsync.sh
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
