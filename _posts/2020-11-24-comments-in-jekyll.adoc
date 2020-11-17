@@ -1,0 +1,19 @@
+---
+layout: post
+title: How to enable comments in Jekyll 
+subtitle: Adding commenting functionality with Staticman
+description: How to setup a commenting system with Staticman for your Jekyll blog 
+date: 2020-11-17 20:45:51 +0100
+categories: 
+    - Tutorial 
+    - Jekyll
+tags: 
+    - CMS
+    - Jekyll
+    - Comments
+    - Raspberry PI
+hero:
+    image: typewriter
+---
+=== How it all started
+I was using Wordpress for quite a while. 

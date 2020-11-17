@@ -1,0 +1,13 @@
+<p class="is-size-7 mb-5">
+    <time datetime="{{ page.date | date: "%Y-%m-%d" }}">
+        <i class="fa-calendar"></i> {{ page.date | date_to_long_string }}
+    </time>
+    &nbsp;
+    {% if page.updated %}
+        (updated: 
+        <time datetime="{{ page.date | date: "%Y-%m-%d" }}">
+            {{ page.date | date_to_long_string }}
+        </time>
+        )
+    {% endif %}
+</p>

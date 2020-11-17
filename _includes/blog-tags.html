@@ -1,0 +1,9 @@
+{% if page.tags %}
+    <div class="tags mt-1">
+        {% for tag in page.tags %}
+            <a class="is-size-7 has-text-dark">
+                <span class="tag is-rounded has-background-grey-lighter mr-3">{{ tag }}</span>
+            </a>
+        {% endfor %}
+    </div>
+{% endif %}

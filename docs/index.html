@@ -14,7 +14,7 @@ features:
 -
     icon: 'fa fa-code'
     header: Tutorials
-    text: 'Coding tutorials for beginners and experts on a variety of topics (JAVA, SpringBoot, Typescript, Angular and many more).'
+    text: 'Tutorials for beginners and experts on a variety of topics (JAVA, SpringBoot, Typescript, Angular, Jekyll and many more).'
     url: tutorials
 -
     icon: 'fa fa-graduation-cap'
@@ -67,7 +67,9 @@ features:
                         </div>
                         <div class="media-content">
                             <div class="content has-text-left">
-                                <div class="is-size-4 has-text-weight-bold">{{feature.header}}</div>
+                                <a href="{{ feature.url }}">
+                                    <div class="is-size-4 has-text-weight-bold">{{feature.header}}</div>
+                                </a>
                                 <p class="is-size-5">
                                     {{feature.text}}
                                 </p>

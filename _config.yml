@@ -51,10 +51,11 @@ asciidoctor:
    pygments-style: monokai
    pygments-linenums-mode: inline
 
+permalink: /:slugified_categories/:year-:month-:day/:title:output_ext
 
 sass:
   sass_dir: _sass
-  # style: compressed
+  style: compressed
 
 # Build settings
 plugins:
@@ -73,7 +74,7 @@ plugins:
 #
 exclude:
   - README.md
-  - cyonsync.sh
+  - deploy.sh
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
