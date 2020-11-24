@@ -1,0 +1,31 @@
+{% assign box_color = '#F2F0F0' %}
+
+<div class="box" style="background-color: {{ box_color }}">
+    <h4 class="title has-text-centered is-size-5 mb-3">Show Random Post</h4>
+    {% include sidebar/random-post.html %}
+</div>
+
+<div class="box" style="background-color: {{ box_color }}">
+    <h4 class="title has-text-centered is-size-5 mb-3">Related Posts</h4>
+    {% include sidebar/related-posts.html %}
+</div>
+
+<div class="box" style="background-color: {{ box_color }}">
+    <h4 class="title has-text-centered is-size-5 mb-3">Popular Categories</h4>
+    {% include sidebar/categories.html %}
+</div>
+
+<div class="box" style="background-color: {{ box_color }}">
+    <h4 class="title has-text-centered is-size-5 mb-3">Popular Tags</h4>
+    {% include sidebar/tags.html %}
+</div>
+
+<div class="box" style="background-color: {{ box_color }}">
+    <h4 class="title has-text-centered is-size-5 mb-3">Archive</h4>
+    {% include sidebar/archive.html %}
+</div>
+
+<div class="box" style="background-color: {{ box_color }}">
+    <h4 class="title has-text-centered is-size-5 mb-3">Share</h4>
+    {% include sidebar/share.html %}
+</div>

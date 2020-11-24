@@ -1,0 +1,7 @@
+<div class="tags ml-2">
+    {% for category in site.categories limit:10 %}
+        <a href="/archive/category/{{ category[0] | slugify }}" aria-label="Category {{ category[0] }}">
+            <span class="tag is-info">{{ category[0] }} ({{ category[1].size }})</span>&nbsp;
+        </a>
+    {% endfor %}
+</div>

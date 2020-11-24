@@ -1,0 +1,16 @@
+
+<div class="columns ml-5 py-3 px-5" style="border-bottom: 1px solid lightgrey; {% if forloop.first or include.hasTopBorder %} border-top: 1px solid lightgrey{% endif %}">
+    {% if include.showDate %}
+        <div class="column is-narrow mr-3 p-1">
+            <span style="white-space: nowrap;">
+                {{ post.date | date_to_string}}    
+            </span>
+        </div>
+    {% endif %}
+    <div class="column is-4 mr-3 p-1">
+        <a href="{{ post.url }}">{{ post.title }}</a>
+    </div>
+    <div class="column p-1">
+        {{ post.summary }}
+    </div>
+</div>

@@ -1,13 +1,35 @@
 ---
 layout: default
 ---
-<h1 class="title is-size-2">{{ page.title }}</h1>
-{% if page.subtitle %}
-    <h2 class="subtitle is-size-3">{{ page.subtitle }}</h2>
-{% endif %}
+<div class="columns">
+    <div class="column is-9 mr-6">
 
-{% include blog-date.html %}
-{% include blog-categories.html %}
-{% include blog-tags.html %}
+        <h1 class="title is-size-2">{{ page.title }}</h1>
 
-{{ content }}
+        {% if page.subtitle %}
+            <h2 class="subtitle is-size-3">{{ page.subtitle }}</h2>
+        {% endif %}
+
+        <p class="is-size-7">
+            {% include blog/date.html date=page.date updated=page.updated %} 
+            {% include blog/reading-time.html con=content %}
+            {% include blog/page-views.html %}
+        </p>
+
+        {% include blog/categories.html categories=page.categories %}
+        {% include blog/tags.html tags=page.tags %}
+
+        <p class="mt-5">{{ page.summary | default: page.description}}</p>
+
+        {{ content }}
+
+    </div>
+
+    <div id="sidebar" class="column is-3">
+        {% include sidebar/sidebar.html %}
+    </div>
+
+</div>
+
+{{ site.data.scripts.jquery-defer }}
+{{ site.data.scripts.load-random-post-defer }}

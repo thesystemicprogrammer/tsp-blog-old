@@ -1,0 +1,24 @@
+---
+layout: default
+permalink: /archive/date
+title: Post Archive by Date
+description: List of all blog posts grouped by year and month
+hero:
+    image: folders
+---
+<h1 class="title is-size-2">{{ page.title }}</h1>
+<h2 class="subtitle is-size-3 mb-6">{{ page.description }}</h2>
+
+{% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'"  %}
+{% for year in postsByYear %}
+    <h2>{{ year.name }}</h2>
+    <div class="mx-5">
+        {% assign postsByMonth = year.items | group_by_exp:"item", "item.date | date: '%B'"  %}
+        {% for month in postsByMonth %}
+            <h3 class="my-5">{{ month.name }}</h3>
+            {% for post in month.items %}
+                {% include archive/post.html %}
+            {% endfor %}  
+        {% endfor %}
+    </div>
+{% endfor %}

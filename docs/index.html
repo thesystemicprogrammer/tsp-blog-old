@@ -5,39 +5,9 @@ hero:
     image: road
     title: The Systemic Programmer
     subtitle: A software engineer's learning journey
-features:
--
-    icon: 'fa fa-rss'
-    header: Blog
-    text: 'Find postings about software engineering and systemic approaches.'
-    url: blog
--
-    icon: 'fa fa-code'
-    header: Tutorials
-    text: 'Tutorials for beginners and experts on a variety of topics (JAVA, SpringBoot, Typescript, Angular, Jekyll and many more).'
-    url: tutorials
--
-    icon: 'fa fa-graduation-cap'
-    header: Quick references
-    text: 'Short and succinct explanation of an essential method, technique or concept.'
-    url: quick-references
-# -
-#     icon: 'fa fa-doc-text'
-#     header: Software
-#     text: 'Documentation of my open source software projects.'
-#     url: software
--
-    icon: 'fa fa-cog'
-    header: 'Why systemic?'
-    text: 'Learn more about the motivation why this page is called "The&nbsp;Systemic&nbsp;Programmer"'
-    url: motivation
 ---
 
-<section class="section">
-    <div class="container has-text-centered">
-        <h1 class="is-size-2">Latest blog publications</h1>
-    </div>
-</section>
+{% include blog/list.html title="Latest blog publications" %}
 
 <section class="section" style="background-color: turquoise;">
     <div class="container has-text-centered">
@@ -57,17 +27,17 @@ features:
     <div class="container has-text-centered">
         <h1 class="is-size-2">Homepage Topics</h1>
         <div class="columns is-multiline" style="margin-top:3rem; margin-left: 4vw;">
-            {% for feature in page.features %}
+            {% for feature in site.data.features %}
                 <div class="column is-half">
                     <div class="media">
                         <div class="media-left" style="margin-top:-0.9rem">
-                            <a href="{{ feature.url }}">
+                            <a href="/{{ feature.url }}" aria-label="{{ feature.aria-label }}">
                                 <i class="fa fa-{{ feature.icon }} has-text-link" style="font-size: 3.5rem;"></i>
                             </a>
                         </div>
                         <div class="media-content">
                             <div class="content has-text-left">
-                                <a href="{{ feature.url }}">
+                                <a href="/{{ feature.url }}">
                                     <div class="is-size-4 has-text-weight-bold">{{feature.header}}</div>
                                 </a>
                                 <p class="is-size-5">
@@ -99,3 +69,6 @@ features:
         </div>
     </div>
 </section>
+
+{{ site.data.scripts.jquery-defer }}
+{{ site.data.scripts.load-more-all-defer }}

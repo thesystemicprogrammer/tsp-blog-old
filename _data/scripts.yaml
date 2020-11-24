@@ -1,0 +1,7 @@
+jquery: <script src="/assets/js/jquery-3.5.1.min.js"></script>
+jquery-defer: <script defer src="/assets/js/jquery-3.5.1.min.js"></script>
+load-more-all-defer: <script defer src="/assets/js/load-more-all.js"></script>
+load-more-software-engineering-defer: <script defer src="/assets/js/load-more-software-engineering.js"></script>
+load-more-systemic-thinking-defer: <script defer src="/assets/js/load-more-systemic-thinking.js"></script>
+load-more-coding-defer: <script defer src="/assets/js/load-more-coding.js"></script>
+load-random-post-defer: <script defer src="/assets/js/load-random-post.js"></script>

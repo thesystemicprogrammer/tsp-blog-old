@@ -1,6 +1,17 @@
-= Sample Page
-:page-layout: default
-:page-permalink: /sample/
+---
+layout: post
+title: How to use asciidoc with Jekyll
+summary: 'Asciidoc provides great formatting possibilities and can easily be integrated into Jekyll.' 
+date: 2020-10-15 20:45:51 +0100
+categories: 
+    - Coding 
+    - Jekyll
+tags: 
+    - CMS
+    - Jekyll
+    - asciidoc
+has-source-code: true
+---
 :url-asciidoctor: http://asciidoctor.org
 
 This is a sample page composed in AsciiDoc.

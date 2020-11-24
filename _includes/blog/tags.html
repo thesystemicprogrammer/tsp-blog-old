@@ -1,7 +1,7 @@
-{% if page.tags %}
+{% if include.tags %}
     <div class="tags mt-1">
-        {% for tag in page.tags %}
-            <a class="is-size-7 has-text-dark">
+        {% for tag in include.tags %}
+            <a href="{{ site.url }}/archive/tag/{{ tag | slugify }}" aria-label="Tag {{ tag }}">
                 <span class="tag is-rounded has-background-grey-lighter mr-3">{{ tag }}</span>
             </a>
         {% endfor %}

@@ -1,0 +1,12 @@
+---
+layout: default
+title: Why ist this page called the Systemic programmer 
+date: 2020-11-23
+hero:
+    image: typewriter
+permalink: /motivation.html
+---
+It seems strange, but I think it goes together very well!
+
+== How it all started
+I used to work in an application integration team for quite a while.  

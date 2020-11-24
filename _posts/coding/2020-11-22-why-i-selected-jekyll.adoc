@@ -1,0 +1,16 @@
+---
+layout: post
+title: Why I selected Jeykll for my blog system
+subtitle: Or how I started to love Ruby
+summary: 'After trying out several CMS systems I finally decided to use Jekyll for my blog. Find out what I like about Jekyll and why I chose it.' 
+date: 2020-11-14 20:45:51 +0100
+categories: 
+    - Coding
+tags: 
+    - CMS
+    - Jekyll
+    - Ruby
+    - Blog
+---
+=== How it all started
+I was using Wordpress for quite a while. But now i am far better of.

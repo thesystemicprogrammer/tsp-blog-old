@@ -1,0 +1,60 @@
+{% capture url_path %}{{site.url}}{{page.url}}{% endcapture %}
+
+<div class="buttons" style="margin-left: 2.2vw; margin-right: 2.2vw;">
+
+    <button class="button is-fullwidth has-text-white" style="background-color: #00aced;" data-sharer="twitter" data-title="The Systemic Programmer - {{ page.title }}" data-url="{{ url_path }}">
+         <span class="icon mr-3" style="margin-top: -0.7rem">
+             <i class="fa fa-twitter is-size-4"></i>
+         </span>
+         <span>
+             Twitter
+         </span>
+     </button>
+ 
+     <button class="button is-fullwidth has-text-white" style="background-color: #3b5998;" data-sharer="facebook" data-url="{{ page.url(true) }}">
+        <span class="icon mr-3" style="margin-top: -0.7rem">
+             <i class="fa fa-facebook is-size-4 mr-05"></i>
+         </span>
+         <span>
+             Facebook
+         </span>
+     </button>
+ 
+     <button class="button is-fullwidth has-text-white" style="background-color: #4DC247;" data-sharer="whatsapp" data-title="The Systemic Programmer - {{ page.title }}" data-url="{{ url_path) }}">
+        <span class="icon mr-3" style="margin-top: -0.7rem">
+             <i class="fa fa-whatsapp is-size-4 mr-05"></i>
+         </span>
+          <span>
+             Whatsapp
+         </span>
+     </button>
+ 
+     <button class="button is-fullwidth has-text-white" style="background-color: #FF6700;" data-sharer="hackernews" data-title="The Systemic Programmer - {{ page.title }}" data-url="{{ url_path }}">
+        <span class="icon mr-3" style="margin-top: -0.7rem">
+             <i class="fa fa-hacker-news is-size-4 mr-05"></i>
+         </span>
+          <span>
+             Hacker News
+         </span>
+     </button>
+ 
+     <button class="button is-fullwidth has-text-white" style="background-color: #00aced;" data-sharer="linkedin" data-url="{{ url_path }}">
+        <span class="icon mr-3" style="margin-top: -0.7rem">
+             <i class="fa fa-linkedin is-size-4 mr-05"></i>
+         </span>
+         <span>
+             Linkedin
+         </span>
+     </button>
+ 
+     <button class="button is-fullwidth" data-sharer="email" data-title="<h2>The Systemic Programmer</h2><h3>{{ page.title }}</h3><p>{{ page.summary }}</p>" data-url="Read the full article: {{ url_path }}" data-subject="The Systemic Programmer - {{ page.title }}" data-to="">
+        <span class="icon mr-3" style="margin-top: -0.7rem">
+             <i class="fa fa-mail-1 is-size-4 mr-05"></i>
+         </span>
+          <span>
+             E-Mail
+         </span>
+     </button>
+ </div>
+
+ <script defer src="/assets/js/sharer.min.js"></script>

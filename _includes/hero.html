@@ -1,8 +1,23 @@
-{% if page.hero.image %}
-    {% assign hero = site.data.licensed-images[page.hero.image] %}
+{% if include.image %}
+    {%assign image = include.image %}
+{% else %}
+    {% assign category = page.categories.first %}
+    {% case category %}
+        {% when "Software Engineering" %}
+            {%assign image = "cogs" %}
+        {% when "Systemic Thinking" %}
+            {%assign image = "net" %}
+        {% when "Coding" %}
+            {%assign image = "code" %}
+    {% endcase %}
+{% endif %}
+
+
+{% if image %}
+    {% assign hero = site.data.licensed-images[image] %}
     {% assign license = site.data.licenses[hero.license] %}
 
-    <div class="hero is-{{ page.hero.extension | default: "medium" }}" style="background-image: url('/assets/images/{{ hero.image }}'); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+    <div class="hero is-{{ page.hero.extension | default: "medium" }} is-light is-bold" style="background-image: url('/assets/images/hero/{{ hero.image }}.webp'); background-position: center center; background-repeat: no-repeat; background-size: cover;">
         <div class="hero-body">
         {% if page.hero.title %}
             <div class="container has-text-centered">
@@ -25,8 +40,8 @@
             Image by
             <a href="{{ hero.author-link }}">{{ hero.author-name }}</a>
             on
-            <a href="{{ hero.company-link }}">{{ hero.company-name }}</a>
-            , licensed under 
+            <a href="{{ hero.company-link }}">{{ hero.company-name }}</a>,
+            licensed under 
             <a href="{{ license.link }}">{{ license.name }}</a>
         </p>
     {% endif %}

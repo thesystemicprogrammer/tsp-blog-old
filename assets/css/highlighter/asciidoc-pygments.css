@@ -1,5 +1,5 @@
 pre.pygments .hll { background-color: #49483e }
-pre.pygments, pre.pygments code { background: #272822; color: #f8f8f2 }
+pre.pygments, pre.pygments code { background: #272822; color: #f8f8f2;  border-radius: 20px; margin-bottom:0.5rem; }
 pre.pygments .tok-c { color: #75715e } /* Comment */
 pre.pygments .tok-err { color: #960050; background-color: #1e0010 } /* Error */
 pre.pygments .tok-k { color: #66d9ef } /* Keyword */

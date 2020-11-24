@@ -1,0 +1,11 @@
+---
+layout: null
+permalink: /api/post-index.json
+---
+[
+{% for post in site.posts limit: 100 %}
+    {
+        "url": "{{site.url}}/{{post.url}}"
+    }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+]

@@ -1,0 +1,17 @@
+---
+layout: post
+title: Agile Application Integration 
+subtitle: How to do application integration in a DevOps setup
+description: Application integration is often the domain of a highly specialized and centralized team. How does this fit in a modern DevOps setup with self-sufficient and autonomous team?  
+date: 2020-11-17 20:45:51 +0100
+categories: 
+    - Software Engineering
+    - DevOps
+tags: 
+    - Application Integration
+    - Agile
+    - DevOps
+    - Architecture
+---
+=== How it all started
+I used to work in an application integration team for quite a while.  

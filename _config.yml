@@ -51,11 +51,35 @@ asciidoctor:
    pygments-style: monokai
    pygments-linenums-mode: inline
 
+pagination:
+  enabled: true
+  per_page: 6
+
+jekyll-archives:
+  enabled: 
+    - categories
+    - tags
+    - month
+  layouts:
+    category: archive-category
+    tag: archive-category
+    month: archive-month
+  permalinks:
+    month: '/archive/date/:year/:month/'
+    tag: '/archive/tag/:name/'
+    category: '/archive/category/:name/'
+  
 permalink: /:slugified_categories/:year-:month-:day/:title:output_ext
 
 sass:
   sass_dir: _sass
   style: compressed
+
+feed:
+  excerpt_only: true
+
+# Latent Semantic Indexing for related posts
+lsi: true
 
 # Build settings
 plugins:
@@ -63,6 +87,9 @@ plugins:
   - jekyll-seo-tag
   - jekyll-archives
   - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate-v2
+  - jekyll-archives
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -75,6 +102,7 @@ plugins:
 exclude:
   - README.md
   - deploy.sh
+  - todo.txt
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/

@@ -1,0 +1,17 @@
+---
+layout: base
+---
+{% include hero.html image="folders" %}
+
+<section class="section wrapper">
+  <div class="container">
+      <div class="content">
+        <h1 class="title is-size-2 mb-6">Archive of posts from {{ page.date | date: "%B %Y" }}</h1>
+        <div class="m-5">
+          {% for post in page.posts %}
+            {% include archive/post.html %}
+          {% endfor %}
+        </div>
+      </div>
+  </div>
+</section>

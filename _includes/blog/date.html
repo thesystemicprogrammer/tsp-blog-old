@@ -1,0 +1,11 @@
+<time datetime="{{ include.date | date: "%Y-%m-%d" }}">
+    <i class="fa-calendar"></i> {{ include.date | date_to_long_string }}
+</time>
+&nbsp;
+{% if include.updated %}
+    (updated: 
+    <time datetime="{{ include.updated | date: "%Y-%m-%d" }}">
+        {{ include.updated | date_to_long_string }}
+    </time>
+    )
+{% endif %}

@@ -1,6 +1,6 @@
 ---
 layout: null
-permalink: /search/search_data.json
+permalink: /api/search_data.json
 ---
 {
   {% for post in site.posts %}

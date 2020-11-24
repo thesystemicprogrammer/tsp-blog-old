@@ -1,0 +1,15 @@
+---
+layout: null
+permalink: /api/blog
+pagination:
+  permalink: ''
+  enabled: true
+  category: Systemic Thinking
+  extension: .html
+  indexpage: 'systemic-thinking-:num'
+---
+{% for post in paginator.posts %}
+    <div class="column is-half">
+        {% include blog/list-item.html %}
+    </div>
+{% endfor %}

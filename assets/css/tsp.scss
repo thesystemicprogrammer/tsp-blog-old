@@ -15,6 +15,8 @@
 @import "bulma/elements/container.sass";
 @import "bulma/elements/title.sass";
 @import "bulma/elements/tag.sass";
+@import "bulma/elements/box.sass";
+@import "bulma/elements/button.sass";
 
 @import "bulma/components/navbar.sass";
 @import "bulma/components/media.sass";
@@ -28,6 +30,7 @@ body {
     display: flex;
     min-height: calc(100vh);
     flex-direction: column;
+    font-size: 1.1rem;
   }
 
 .wrapper {
@@ -61,17 +64,48 @@ li {
     margin-bottom:0.5rem;
 }
 
+/** Sidebar specific tweaks **/
+#sidebar {
+
+    ul.related-posts {
+      box-shadow: none;
+      padding: 0;
+      z-index: 1;
+  
+      li {
+        margin: 0;
+        padding-bottom: 0.2rem;
+        padding-top: 0.2rem;
+        font-size: smaller;
+        border-bottom: 1px solid darkgray;
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+  
+    }
+  
+    ul.archives {
+      list-style: none;
+      margin-left: 0;
+  
+      .label {
+        vertical-align: text-top;
+      }
+    }
+  }
+
 //
 // Styles for embedded fonts
 //
 @import "icons/fontello-embedded.css";
 
-// 
-// Styles for ASCIIDOC and Pygments Source Code Highlighter
-//
-@import "asciidoc/asciidoc.css";
-@import "highlighter/asciidoc-pygments.css";
+// // 
+// // Styles for ASCIIDOC and Pygments Source Code Highlighter
+// //
+// @import "asciidoc/asciidoc.css";
+// @import "highlighter/asciidoc-pygments.css";
 
-.colist table {
-    margin-top:0.6rem;
-}
+// .colist table {
+//     margin-top:0.6rem;
+// }

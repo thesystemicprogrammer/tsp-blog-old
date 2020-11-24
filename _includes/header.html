@@ -1,8 +1,8 @@
 <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="container">
         <div class="navbar-brand">
-            <a class="navbar-item" href="{{ site.url }}">
-                <img src="/assets/images/tsp_logo.svg" width="180">
+            <a class="navbar-item" href="{{ site.url }}" aria-label="Return to homepage">
+                <img src="/assets/images/tsp_logo.svg" width="180" alt="Logo The Systemic Programmer">
             </a>
 
             <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
@@ -16,16 +16,25 @@
         <div id="navbarBasicExample" class="navbar-menu">
         
             <div class="navbar-end">
-                <a class="navbar-item has-text-weight-semibold" href="{{ site.url }}">  
-                    Blog
+                <a class="navbar-item has-text-weight-semibold" href="{{ site.url }}/software-engineering">  
+                    Software Engineering
                 </a>
-                <a class="navbar-item has-text-weight-semibold" href="{{ site.url }}">  
-                    Tutorials
+                <a class="navbar-item has-text-weight-semibold" href="{{ site.url }}/systemic-thinking">  
+                    Systemic Thinking
                 </a>
-                <a class="navbar-item has-text-weight-semibold" href="{{ site.url }}">  
-                    Quick References
+                <a class="navbar-item has-text-weight-semibold" href="{{ site.url }}/coding">  
+                    Coding
                 </a>
-                <a class="navbar-item has-text-weight-semibold" href="search/search.html">  
+                <a class="navbar-item has-text-weight-semibold" href="{{ site.url }}/archive/category">  
+                    Categories
+                </a>
+                <a class="navbar-item has-text-weight-semibold" href="{{ site.url }}/archive/tag">  
+                    Tags
+                </a>
+                <a class="navbar-item has-text-weight-semibold" href="{{ site.url }}/archive/date">  
+                    Archive
+                </a>
+                <a class="navbar-item has-text-weight-semibold" href="/search" aria-label="Search blog">  
                     <i class="fas fa-lg fa-search"></i>
                 </a>
             </div>

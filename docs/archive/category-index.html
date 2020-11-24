@@ -1,0 +1,58 @@
+---
+layout: default
+permalink: /archive/category
+title: Blog Post Archive by Category
+description: List of all blog posts grouped by categories
+hero:
+    image: library
+---
+<h1 class="title is-size-2">{{ page.title }}</h1>
+<h2 class="subtitle is-size-3 mb-6">{{ page.description }}</h2>
+
+{% for post in site.posts %}
+    {% unless forloop.first %}
+        {% assign categoryString = categoryString | append: "@" %}
+    {% endunless %}
+    {% assign flatCategories = post.categories | join: "," %}
+    {% assign categoryString = categoryString | append: flatCategories %} 
+{% endfor %}
+
+{% assign fullCategoryArray = categoryString | split: "@" | uniq | sort %}
+{% assign previousCategoryArray = "@,@,@" | split: "," %}
+
+{% for categoryString in fullCategoryArray %}
+    {% assign categoryArray = categoryString | split: "," %} 
+    {% for category in categoryArray %}
+        {% unless previousCategoryArray[forloop.index0] == category %}
+            {% case forloop.index %}
+                {% when 1 %}
+                    <div class="mt-6 mb-4">
+                        <h2 class="is-size-2">{{ category }}</h2>
+                    </div>
+                {% when 2 %}
+                    <div class="my-5" style="margin-left:3rem">
+                        <h3 class="is-size-3">{{ category }}</h3>
+                    </div>
+                {% else %}
+                    <div class="my-5" style="margin-left:4.5rem">
+                        <h4 class="is-size-4">{{ category }}</h4>
+                    </div>
+                {% endcase %}
+        {% endunless %}
+    {% endfor %}
+
+    <div style="margin-left:5rem;">
+        {% assign hasTopBorder=true %}
+        {% for post in site.posts %} 
+            {% assign postCategoriesString = post.categories | join: "," %}
+            
+            {% if categoryString == postCategoriesString %}
+                {% include archive/post.html showDate=true hasTopBorder=hasTopBorder%}
+                {% assign hasTopBorder=false %}
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    {% assign previousCategoryArray = categoryArray %}
+
+{% endfor %}

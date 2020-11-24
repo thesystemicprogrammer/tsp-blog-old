@@ -1,0 +1,9 @@
+<div class="tags ml-2">
+    {% for tag in site.tags limit:10 %}
+        <a href="{{ site.url }}/archive/tag/{{ tag[0] | slugify }}" aria-label="Tag {{ tag[0] }}">
+            <span class="tag is-rounded has-background-grey-lighter mr-3">
+                {{ tag[0] }} ({{ tag[1].size }})
+            </span>
+        </a>
+    {% endfor %}
+</div>

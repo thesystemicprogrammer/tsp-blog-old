@@ -1,0 +1,14 @@
+---
+layout: null
+permalink: /api/blog
+pagination:
+  permalink: ''
+  enabled: true
+  extension: .html
+  indexpage: 'all-:num'
+---
+{% for post in paginator.posts %}
+    <div class="column is-half">
+        {% include blog/list-item.html %}
+    </div>
+{% endfor %}

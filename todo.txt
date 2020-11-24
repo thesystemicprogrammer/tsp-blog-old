@@ -1,0 +1,9 @@
+- Check possibility to use jpg and webp in background images
+- Check footer style for IE 
+- Collapse hamburger menu in case of small resolution (mobile)
+- Credits in copyright notice
+    - Jekyll
+    - Bulma
+    - Fontawsome
+    - Pixabay images
+    
