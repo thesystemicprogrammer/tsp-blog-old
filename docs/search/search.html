@@ -2,9 +2,28 @@
 title: Search blog posts
 permalink: /search
 layout: default
+title: Search Blog Posts
+description: Full text search of all blog posts
 hero: 
-  image: telescope
-  title: Search Blog
+  image: binoculars
 ---
 
-<h1>Search</h1>
+<h1 class="title is-size-2 mb-6">{{ page.title }}</h1>
+
+<div class="control has-icons-left">
+  <input id="search" class="input is-rounded" type="text" placeholder="Search ..." style="max-width:40rem;">
+  <span class="icon is-left ml-2" style="margin-top:.5rem;">
+    <i class="fas fa-search"></i>
+  </span>
+</div>
+
+<div id="results" class="mt-6">
+</div>
+
+<div class="has-text-centered mt-6">
+  <button id="load-more" class="button is-link">Load more ...</button>
+</div>
+
+{{ site.data.scripts.jquery-defer }}
+{{ site.data.scripts.lunr-defer }}
+{{ site.data.scripts.search-defer }}

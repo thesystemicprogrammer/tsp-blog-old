@@ -5,3 +5,5 @@ load-more-software-engineering-defer: <script defer src="/assets/js/load-more-so
 load-more-systemic-thinking-defer: <script defer src="/assets/js/load-more-systemic-thinking.js"></script>
 load-more-coding-defer: <script defer src="/assets/js/load-more-coding.js"></script>
 load-random-post-defer: <script defer src="/assets/js/load-random-post.js"></script>
+lunr-defer: <script defer src="assets/js/lunr.min.js"></script>
+search-defer: <script defer src="assets/js/search.js"></script>

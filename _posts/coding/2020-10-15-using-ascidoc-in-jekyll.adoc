@@ -1,8 +1,10 @@
 ---
 layout: post
 title: How to use asciidoc with Jekyll
+description: 'Asciidoc provides great formatting possibilities and can easily be integrated into Jekyll. Learn how you can best use it with Jeykll!' 
 summary: 'Asciidoc provides great formatting possibilities and can easily be integrated into Jekyll.' 
-date: 2020-10-15 20:45:51 +0100
+date: 2020-10-15 
+created: 2020-10-15
 categories: 
     - Coding 
     - Jekyll

@@ -5,6 +5,8 @@ _site
 .jekyll-metadata
 vendor
 
+/docs/api/lunr_index.json
+
 # Ruby Gem
 *.gem
 .bundle

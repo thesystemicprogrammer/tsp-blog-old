@@ -1,20 +1,20 @@
 -
     icon: 'fa fa-server'
     header: Software Engineering
-    text: 'Find postings about software engineering and systemic approaches.'
+    text: 'Find articles on topics such as methodologies, architecture, design or development.'
     aria-label: List of postings under the category Blog
     url: software-engineering
 -
     icon: 'fa fa-code'
     header: Code
-    text: 'Tutorials for beginners and experts on a variety of topics (JAVA, SpringBoot, Typescript, Angular, Jekyll and many more).'
+    text: 'Tutorials for beginners and experts on a variety of topics (JAVA, SpringBoot, Angular, Jekyll and many more).'
     aria-label: List of postings under the category Tutorial
     url: tutorials
 -
     icon: 'fa fa-cog-alt'
     header: Systemic Thinking
-    text: 'Short and succinct explanation of an essential method, technique or concept.'
-    aria-label: List of postings under the category Quick References
+    text: 'Discussion of systemic concepts and approaches and how we can use them in the domain of software engineering.'
+    aria-label: List of postings under the category Systemic Thinking 
     url: quick-references
 # -
 #     icon: 'fa fa-doc-text'

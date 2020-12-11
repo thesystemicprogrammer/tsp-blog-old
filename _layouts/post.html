@@ -11,7 +11,7 @@ layout: default
         {% endif %}
 
         <p class="is-size-7">
-            {% include blog/date.html date=page.date updated=page.updated %} 
+            {% include blog/date.html created=page.created updated=page.date %} 
             {% include blog/reading-time.html con=content %}
             {% include blog/page-views.html %}
         </p>

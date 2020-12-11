@@ -9,7 +9,12 @@
 
 @import "bulma/helpers/color.sass";
 @import "bulma/helpers/spacing.sass";
+@import "bulma/helpers/visibility.sass";
 @import "bulma/helpers/typography.sass";
+
+@import "bulma/form/shared.sass";
+@import "bulma/form/input-textarea.sass";
+@import "bulma/form/tools.sass";
 
 @import "bulma/elements/container.sass";
 @import "bulma/elements/container.sass";

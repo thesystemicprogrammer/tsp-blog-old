@@ -12,7 +12,8 @@ hero:
     CH-3664 Burgistein<br/>  
     Switzerland<br/>
 </p>
-<p>  
-    E-Mail: info@thesystemicprogrammer.org<br/>
+<p>
+    {% assign textEmail = site.email | replace: "@", "(at)" %}
+    <a href="mailto:{{ site.email | encode_email }}" title={{ textEmail }}>{{ textEmail }}</a>  
 </p>
 

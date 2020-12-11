@@ -82,3 +82,10 @@
     company-name: Unsplash
     company-link: https://unsplash.com/s/photos/cogs?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText
     license: unsplash
+  binoculars:
+    image: binoculars
+    author-name: tito pixel
+    author-link: https://unsplash.com/@titopixel?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText
+    company-name: Unsplash
+    company-link: https://unsplash.com/s/photos/binoculars?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText
+    license: unsplash

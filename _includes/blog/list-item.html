@@ -2,14 +2,14 @@
 
     <p class="is-size-5 mb-2 mt-0"><a href="{{ post.url }}">{{ post.title }}</a></p>
     <p class="is-size-7">
-        {% include blog/date.html date=post.date updated=post.updated %} 
+        {% include blog/date.html created=post.created updated=post.date %} 
         {% include blog/reading-time.html con=post.content %}
         {% include blog/page-views.html %}
     </p>
 
     {% include blog/categories.html categories=post.categories %}
     
-    <p class="mt-5">{{ post.summary }}</p> 
+    <p class="mt-5">{{ post.summary | truncate: 200 }}</p> 
 
     <span style="position: absolute; bottom:1rem;">{% include blog/tags.html tags=post.tags %}</span>
 

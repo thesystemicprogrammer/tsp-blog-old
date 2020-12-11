@@ -6,4 +6,7 @@
     - Bulma
     - Fontawsome
     - Pixabay images
+    - Lunr
+
+- Text For Features on homepage anpassen. 
     
